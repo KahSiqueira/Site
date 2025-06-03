@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kah Siqueira - Design Estratégico</title>
+    <link rel="icon" href="./img/kah/k-icone.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/sections.css">
+    <link rel="stylesheet" href="./css/components.css">
+</head>
+<body class="bg-brand-bg-white font-body">
+
+    <div id="confirmationModal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h3 class="text-xl font-heading text-brand-primary mb-4">Obrigada pelo seu contato!</h3>
+            <p class="text-brand-text">Em breve retornarei. (Esta é uma demonstração, o formulário não envia dados reais.)</p>
+            <button id="closeModalBtn" class="close-modal-btn focus:outline-none focus:ring-2 focus:ring-brand-primary">Fechar</button>
+        </div>
+    </div>
+
+    <header id="mainNavbar" class="bg-transparent py-6 fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-heading font-bold site-name-text text-white transition-colors duration-300">Kah Siqueira</a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="nav-link text-gray-100 hover:text-brand-secondary transition-colors duration-300">Início</a>
+                <a href="#about" class="nav-link text-gray-100 hover:text-brand-secondary transition-colors duration-300">Sobre Mim</a>
+                <a href="#services" class="nav-link text-gray-100 hover:text-brand-secondary transition-colors duration-300">Serviços</a>
+                <a href="#packages" class="nav-link text-gray-100 hover:text-brand-secondary transition-colors duration-300">Pacotes</a>
+                <a href="#calculator" class="nav-link text-gray-100 hover:text-brand-secondary transition-colors duration-300">Calculadora</a>
+                <a href="#faq" class="nav-link text-gray-100 hover:text-brand-secondary transition-colors duration-300">FAQ</a>
+                <a href="#contact" class="nav-link text-gray-100 hover:text-brand-secondary transition-colors duration-300">Contato</a>
+            </nav>
+            <button id="mobileMenuButton" class="md:hidden focus:outline-none text-white transition-colors duration-300" aria-label="Abrir menu móvel">
+                <svg id="hamburgerIcon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                <svg id="closeIcon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="md:hidden absolute top-full left-0 w-full shadow-lg rounded-b-lg hidden">
+            <div class="flex flex-col items-center space-y-4 py-4">
+                <a href="#home" class="nav-link text-white hover:text-brand-accent transition-colors px-4 py-2">Início</a>
+                <a href="#about" class="nav-link text-white hover:text-brand-accent transition-colors px-4 py-2">Sobre Mim</a>
+                <a href="#services" class="nav-link text-white hover:text-brand-accent transition-colors px-4 py-2">Serviços</a>
+                <a href="#packages" class="nav-link text-white hover:text-brand-accent transition-colors px-4 py-2">Pacotes</a>
+                <a href="#calculator" class="nav-link text-white hover:text-brand-accent transition-colors px-4 py-2">Calculadora</a>
+                <a href="#faq" class="nav-link text-white hover:text-brand-accent transition-colors px-4 py-2">FAQ</a>
+                <a href="#contact" class="nav-link text-white hover:text-brand-accent transition-colors px-4 py-2">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="h-screen flex items-center justify-center bg-cover bg-center">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h1 class="text-5xl sm:text-6xl md:text-7xl font-heading text-white mb-4">Kah Siqueira</h1>
+            <p class="text-xl sm:text-2xl md:text-3xl font-body text-brand-secondary mb-8">Social Media Estrategista | Design Estratégico</p>
+            <p class="text-base sm:text-lg text-gray-200 mb-10 max-w-xl mx-auto">Transformando sua presença digital com estratégia, criatividade e paixão.</p>
+            <a href="#services" class="font-semibold rounded-lg transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg bg-brand-accent text-white hover:bg-opacity-90 focus:ring-brand-accent">Descubra Meus Serviços</a>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding bg-brand-bg-light">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl sm:text-4xl font-heading text-brand-text text-center mb-12">Sobre Mim</h2>
+            <div class="max-w-3xl mx-auto md:flex md:items-center md:space-x-12">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center items-center">
+                    <img src="./img/kah/k-foto.png" alt="Kah Siqueira" class="rounded-full shadow-xl w-64 h-64 md:w-full md:h-auto object-cover border-4 border-brand-secondary" onerror="this.onerror=null; this.src='https://placehold.co/256x256/E6E0D9/513F32?text=Kah+Siqueira';">
+                </div>
+                <div class="md:w-2/3 text-brand-light-text space-y-4 text-center md:text-left">
+                    <p class="text-base sm:text-lg">Sou estrategista de social media com mais de 15 anos de experiência no universo do marketing. Ao longo da minha trajetória, mergulhei em diferentes áreas da comunicação digital, sempre com um olhar estratégico e apaixonado pelo que faço.</p>
+                    <p class="text-base sm:text-lg">Minha missão é transformar ideias em resultados concretos, criando conexões autênticas entre marcas e pessoas. O marketing, para mim, vai muito além de métricas - é sobre propósito, criatividade e entrega com qualidade.</p>
+                    <p class="text-base sm:text-lg">Levo cada projeto com comprometimento genuíno, buscando sempre superar expectativas e gerar impacto real. Meu trabalho é minha paixão, e é essa energia que me move todos os dias.</p>
+                    <p class="text-base sm:text-lg font-semibold text-brand-text"> "Meu trabalho é minha paixão, e é essa energia que me move todos os dias."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section-padding bg-brand-bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl sm:text-4xl font-heading text-brand-primary text-center mb-4">Meus Serviços</h2>
+            <p class="text-base sm:text-lg text-brand-light-text text-center mb-12 max-w-2xl mx-auto">Soluções personalizadas para impulsionar sua marca no universo digital. Desde a estratégia até a execução, cuido de cada detalhe para que você alcance seus objetivos.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-brand-bg-white p-6 md:p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl border border-gray-200 flex flex-col items-center text-center">
+                    <div class="mb-4 text-brand-accent"> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/><path d="M11 17h2"/><path d="M12 22v-5"/></svg></div>
+                    <h3 class="text-xl font-heading text-brand-primary mb-3">Estratégia de Mídias Sociais Personalizada</h3>
+                    <p class="text-brand-light-text text-sm flex-grow">Desenvolvimento de planos estratégicos alinhados aos seus objetivos de negócio, público-alvo e identidade de marca.</p>
+                </div>
+                <div class="bg-brand-bg-white p-6 md:p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl border border-gray-200 flex flex-col items-center text-center">
+                    <div class="mb-4 text-brand-accent"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                    <h3 class="text-xl font-heading text-brand-primary mb-3">Gerenciamento de Contas Sociais</h3>
+                    <p class="text-brand-light-text text-sm flex-grow">Gestão completa de perfis (Instagram, Facebook, LinkedIn, etc.), incluindo postagens, interações e monitoramento.</p>
+                </div>
+                <div class="bg-brand-bg-white p-6 md:p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl border border-gray-200 flex flex-col items-center text-center">
+                    <div class="mb-4 text-brand-accent"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-feather"><path d="M20.24 12.24L12 20.48c-.78.78-2.05.78-2.83 0L3.52 14.32a2 2 0 0 1 0-2.83L11.76 3.04c.78-.78 2.05-.78 2.83 0l5.92 5.92a2 2 0 0 1 0 2.83z"/><path d="M15 7l-5.92 5.92"/><path d="M18.5 10.5L12 17"/></svg></div>
+                    <h3 class="text-xl font-heading text-brand-primary mb-3">Criação de Conteúdo Otimizado</h3>
+                    <p class="text-brand-light-text text-sm flex-grow">Produção de conteúdo relevante e engajador (posts, stories, vídeos curtos) que ressoa com sua audiência.</p>
+                </div>
+                <div class="bg-brand-bg-white p-6 md:p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl border border-gray-200 flex flex-col items-center text-center">
+                    <div class="mb-4 text-brand-accent"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.83 0 1.64-.1 2.4-.28 1.12-.3 2.12-.92 2.9-1.7l3.05-3.05c.9-.9 1.4-2.03 1.4-3.23 0-1.2-.5-2.33-1.4-3.23L16.2 3.7c-.78-.78-1.78-1.39-2.9-1.72A10 10 0 0 0 12 2z"/><path d="M2.5 12.5l5.5 5.5"/><path d="M12.5 2.5l5.5 5.5"/><path d="M17.5 12.5l-5.5 5.5"/></svg></div>
+                    <h3 class="text-xl font-heading text-brand-primary mb-3">Design Gráfico para Mídias Sociais</h3>
+                    <p class="text-brand-light-text text-sm flex-grow">Criação de visuais atraentes e profissionais para suas publicações, fortalecendo a identidade visual da sua marca.</p>
+                </div>
+                <div class="bg-brand-bg-white p-6 md:p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl border border-gray-200 flex flex-col items-center text-center">
+                    <div class="mb-4 text-brand-accent"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bar-chart-2"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg></div>
+                    <h3 class="text-xl font-heading text-brand-primary mb-3">Análise de Métricas e Relatórios</h3>
+                    <p class="text-brand-light-text text-sm flex-grow">Acompanhamento de desempenho, análise de resultados e geração de relatórios com insights para otimização contínua.</p>
+                </div>
+                <div class="bg-brand-bg-white p-6 md:p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl border border-gray-200 flex flex-col items-center text-center">
+                    <div class="mb-4 text-brand-accent"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+                    <h3 class="text-xl font-heading text-brand-primary mb-3">Consultoria Estratégica em Marketing Digital</h3>
+                    <p class="text-brand-light-text text-sm flex-grow">Sessões de consultoria para orientar suas ações de marketing, solucionar dúvidas e traçar novos caminhos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="packages" class="section-padding bg-brand-bg-light">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl sm:text-4xl font-heading text-brand-text text-center mb-4">Pacotes Prontos</h2>
+            <p class="text-base sm:text-lg text-brand-light-text text-center mb-12 max-w-2xl mx-auto"> Escolha o pacote que melhor se adapta às suas necessidades e comece a transformar sua presença digital hoje mesmo.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                <div class="bg-brand-bg-white p-6 md:p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:border hover:border-brand-accent/50 flex flex-col">
+                    <h3 class="text-2xl font-heading text-brand-primary mb-2 text-center">Pacote Presença Digital</h3>
+                    <p class="text-3xl font-bold text-brand-accent mb-1 text-center">R$ 800</p> <p class="text-xs text-brand-light-text mb-6 text-center">por mês</p>
+                    <ul class="space-y-3 mb-8 flex-grow">
+                        <li class="flex items-start text-sm text-brand-light-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-brand-primary mr-2 shrink-0"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg><span>Gerenciamento de 1 plataforma social</span></li>
+                        <li class="flex items-start text-sm text-brand-light-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-brand-primary mr-2 shrink-0"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg><span>8 posts por mês (design + legenda)</span></li>
+                        <li class="flex items-start text-sm text-brand-light-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-brand-primary mr-2 shrink-0"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg><span>Relatório mensal básico</span></li>
+                        <li class="flex items-start text-sm text-brand-light-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-brand-primary mr-2 shrink-0"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg><span>Suporte via e-mail</span></li>
+                    </ul>
+                    <a href="#contact" class="font-semibold rounded-lg transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 px-6 py-3 text-base w-full mt-auto bg-brand-primary text-white hover:bg-opacity-90 focus:ring-brand-primary flex items-center justify-center">Quero Este Pacote</a>
+                </div>
+                <div class="bg-brand-bg-white p-6 md:p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:border hover:border-brand-accent/50 flex flex-col ring-2 ring-brand-accent lg:scale-105">
+                    <div class="popular-badge w-fit mx-auto -mt-6 mb-4">Mais Popular</div> <h3 class="text-2xl font-heading text-brand-primary mb-2 text-center">Pacote Crescimento Estratégico</h3>
+                    <p class="text-3xl font-bold text-brand-accent mb-1 text-center">R$ 1500</p><p class="text-xs text-brand-light-text mb-6 text-center">por mês</p>
+                    <ul class="space-y-3 mb-8 flex-grow">
+                        <li class="flex items-start text-sm text-brand-light-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-brand-primary mr-2 shrink-0"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg><span>Gerenciamento de 2 plataformas sociais</span></li>
+                        <li class="flex items-start text-sm text-brand-light-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-brand-primary mr-2 shrink-0"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg><span>12 posts por mês (design + legenda)</span></li>
+                        <li class="flex items-start text-sm text-brand-light-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-brand-primary mr-2 shrink-0"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg><span>4 stories interativos por semana</span></li>
+                        <li class="flex items-start text-sm text-brand-light-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-brand-primary mr-2 shrink-0"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg><span>Configuração e monitoramento básico de campanhas</span></li>
+                        <li class="flex items-start text-sm text-brand-light-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-brand-primary mr-2 shrink-0"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg><span>Relatório mensal detalhado</span></li>
+                        <li class="flex items-start text-sm text-brand-light-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-brand-primary mr-2 shrink-0"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg><span>Suporte prioritário</span></li>
+                    </ul>
+                    <a href="#contact" class="font-semibold rounded-lg transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 px-6 py-3 text-base w-full mt-auto bg-brand-accent text-white hover:bg-opacity-90 focus:ring-brand-accent flex items-center justify-center">Quero Este Pacote</a>
+                </div>
+                <div class="bg-brand-bg-white p-6 md:p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:border hover:border-brand-accent/50 flex flex-col">
+                    <h3 class="text-2xl font-heading text-brand-primary mb-2 text-center">Pacote Impacto Total</h3>
+                    <p class="text-3xl font-bold text-brand-accent mb-1 text-center">R$ 2500</p><p class="text-xs text-brand-light-text mb-6 text-center">por mês</p>
+                    <ul class="space-y-3 mb-8 flex-grow">
+                        <li class="flex items-start text-sm text-brand-light-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-brand-primary mr-2 shrink-0"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg><span>Gerenciamento de até 3 plataformas sociais</span></li>
+                        <li class="flex items-start text-sm text-brand-light-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-brand-primary mr-2 shrink-0"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg><span>20 posts por mês (design + legenda + variação)</span></li>
+                        <li class="flex items-start text-sm text-brand-light-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-brand-primary mr-2 shrink-0"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg><span>8 stories interativos por semana</span></li>
+                        <li class="flex items-start text-sm text-brand-light-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-brand-primary mr-2 shrink-0"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg><span>Criação de 2 vídeos curtos (Reels/Tik Toks) por mês</span></li>
+                        <li class="flex items-start text-sm text-brand-light-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-brand-primary mr-2 shrink-0"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg><span>Consultoria estratégica quinzenal</span></li>
+                        <li class="flex items-start text-sm text-brand-light-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-brand-primary mr-2 shrink-0"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" /></svg><span>Relatório mensal completo com insights</span></li>
+                    </ul>
+                    <a href="#contact" class="font-semibold rounded-lg transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 px-6 py-3 text-base w-full mt-auto bg-brand-primary text-white hover:bg-opacity-90 focus:ring-brand-primary flex items-center justify-center">Quero Este Pacote</a>
+                </div>
+            </div>
+            <p class="text-center mt-12 text-brand-light-text text-base sm:text-lg">Não encontrou o pacote ideal? <a href="#calculator" class="text-brand-accent font-semibold hover:underline">Monte um orçamento personalizado</a> ou <a href="https://wa.me/554598309598" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-semibold hover:underline">entre em contato</a>!</p>
+        </div>
+    </section>
+
+    <section id="calculator" class="section-padding bg-brand-bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl sm:text-4xl font-heading text-brand-primary text-center mb-4">Calculadora de Orçamento Personalizado</h2>
+            <p class="text-base sm:text-lg text-brand-light-text text-center mb-12 max-w-2xl mx-auto">Selecione a quantidade de cada serviço que você precisa para ter uma estimativa de investimento. Este é o valor aproximado, entre em contato para um orçamento detalhado.</p>
+            <div class="max-w-4xl mx-auto bg-brand-bg-white p-6 md:p-8 rounded-xl shadow-xl">
+                <div class="space-y-6 mb-8" id="calculableServices"></div>
+                <div class="text-center border-t border-gray-200 pt-8">
+                    <h3 class="text-2xl font-heading text-brand-primary mb-2">Total Estimado:</h3>
+                    <p id="totalPriceDisplay" class="text-4xl font-bold text-brand-accent mb-6" aria-live="polite">R$ 0,00</p>
+                    <a href="#contact" class="font-semibold rounded-lg transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg bg-brand-accent text-white hover:bg-opacity-90 focus:ring-brand-accent">Solicitar Orçamento</a>
+                    <p class="text-xs text-brand-light-text mt-4">Este valor é uma estimativa. O preço final pode variar conforme a complexidade e escopo do projeto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding bg-brand-bg-light">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl sm:text-4xl font-heading text-brand-text text-center mb-4">Entre em Contato</h2>
+            <p class="text-base sm:text-lg text-brand-light-text text-center mb-12 max-w-2xl mx-auto"> Vamos conversar sobre como posso ajudar a sua marca a brilhar! Preencha o formulário ou utilize um dos canais abaixo.</p>
+            <div class="md:flex md:space-x-12">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h3 class="text-2xl font-heading text-brand-text mb-4">Informações de Contato</h3>
+                    <p class="text-brand-light-text mb-2">Sinta-se à vontade para me contatar diretamente:</p>
+                    <ul class="space-y-3 text-brand-light-text mb-6">
+                        <li><strong>Email:</strong> <a href="mailto:Katricia.siqueira@gmail.com" class="text-brand-accent hover:underline">Katricia.siqueira@gmail.com</a></li>
+                        <li><strong>WhatsApp/Telefone:</strong> <a href="https://wa.me/554598309598" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:underline">+55 45 9830-9598</a></li>
+                    </ul>
+                    <h3 class="text-xl font-heading text-brand-text mb-2">Siga-me nas redes:</h3>
+                    <div class="flex space-x-4"><a href="https://instagram.com/eukahsiqueira/" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:text-brand-primary transition-colors text-sm">Instagram</a></div>
+                    <img src="./img/kah/k-notebook.png" alt="Detalhe de escritório" class="mt-8 rounded-lg shadow-md object-cover w-full h-auto" onerror="this.onerror=null; this.src='https://placehold.co/600x400/E6E0D9/513F32?text=Ambiente+de+Trabalho';">
+                </div>
+                <form id="contactForm" class="md:w-1/2 bg-white p-8 rounded-xl shadow-xl">
+                    <div class="mb-5">
+                        <label for="name" class="block text-brand-text text-sm font-medium mb-2">Seu Nome</label>
+                        <input type="text" id="name" name="name" class="bg-gray-50 border border-gray-300 text-brand-text text-sm rounded-lg focus:ring-brand-accent focus:border-brand-accent block w-full p-2.5" placeholder="Nome Completo" required>
+                    </div>
+                    <div class="mb-5">
+                        <label for="email" class="block text-brand-text text-sm font-medium mb-2">Seu Email</label>
+                        <input type="email" id="email" name="email" class="bg-gray-50 border border-gray-300 text-brand-text text-sm rounded-lg focus:ring-brand-accent focus:border-brand-accent block w-full p-2.5" placeholder="email@exemplo.com" required>
+                    </div>
+                    <div class="mb-5">
+                        <label for="subject" class="block text-brand-text text-sm font-medium mb-2">Assunto</label>
+                        <input type="text" id="subject" name="subject" class="bg-gray-50 border border-gray-300 text-brand-text text-sm rounded-lg focus:ring-brand-accent focus:border-brand-accent block w-full p-2.5" placeholder="Sobre o que gostaria de falar?">
+                    </div>
+                    <div class="mb-5">
+                        <label for="message" class="block text-brand-text text-sm font-medium mb-2">Sua Mensagem</label>
+                        <textarea id="message" name="message" rows="4" class="block p-2.5 w-full text-sm text-brand-text bg-gray-50 rounded-lg border border-gray-300 focus:ring-brand-accent focus:border-brand-accent" placeholder="Deixe sua mensagem aqui..." required></textarea>
+                    </div>
+                    <button type="submit" class="font-semibold rounded-lg transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 px-6 py-3 text-base bg-brand-accent text-white hover:bg-opacity-90 focus:ring-brand-accent w-full">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section-padding bg-brand-bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl sm:text-4xl font-heading text-brand-primary text-center mb-4">Perguntas Frequentes (FAQ)</h2>
+            <p class="text-base sm:text-lg text-brand-light-text text-center mb-12 max-w-2xl mx-auto">Tire suas dúvidas mais comuns sobre meus serviços e como posso ajudar seu negócio a crescer.</p>
+            <div class="max-w-2xl mx-auto">
+                <div class="border-b border-gray-200 py-1">
+                    <button type="button" class="flex justify-between items-center w-full py-5 font-medium text-left text-brand-text hover:text-brand-primary transition-colors" aria-expanded="false" aria-controls="faq-content-q1"><span>O que faz um Social Media Estrategista?</span><svg class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                    <div id="faq-content-q1" class="pb-5 px-1 text-brand-light-text text-sm hidden"><p>Um Social Media Estrategista planeja, cria e gerencia a presença online de uma marca nas redes sociais. Isso inclui desenvolver estratégias de conteúdo, analisar métricas, interagir com a audiência e garantir que as ações estejam alinhadas aos objetivos de marketing e negócios da empresa.</p></div>
+                </div>
+                <div class="border-b border-gray-200 py-1">
+                    <button type="button" class="flex justify-between items-center w-full py-5 font-medium text-left text-brand-text hover:text-brand-primary transition-colors" aria-expanded="false" aria-controls="faq-content-q2"><span>Por que preciso de um profissional para gerenciar minhas mídias sociais?</span><svg class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                    <div id="faq-content-q2" class="pb-5 px-1 text-brand-light-text text-sm hidden"><p>Um profissional traz expertise, economiza seu tempo, cria conteúdo de qualidade e utiliza estratégias eficazes para aumentar o engajamento, visibilidade e, consequentemente, os resultados do seu negócio. Além disso, mantém a consistência e profissionalismo da sua marca online.</p></div>
+                </div>
+                <div class="border-b border-gray-200 py-1">
+                    <button type="button" class="flex justify-between items-center w-full py-5 font-medium text-left text-brand-text hover:text-brand-primary transition-colors" aria-expanded="false" aria-controls="faq-content-q3"><span>Quanto tempo leva para ver resultados?</span><svg class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                    <div id="faq-content-q3" class="pb-5 px-1 text-brand-light-text text-sm hidden"><p>Os resultados em mídias sociais variam dependendo de diversos fatores, como o nicho de mercado, investimento, consistência e a estratégia adotada. Geralmente, resultados significativos começam a aparecer entre 3 a 6 meses de trabalho contínuo e estratégico.</p></div>
+                </div>
+                <div class="border-b border-gray-200 py-1">
+                    <button type="button" class="flex justify-between items-center w-full py-5 font-medium text-left text-brand-text hover:text-brand-primary transition-colors" aria-expanded="false" aria-controls="faq-content-q4"><span>Vocês oferecem pacotes personalizados além dos listados?</span><svg class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                    <div id="faq-content-q4" class="pb-5 px-1 text-brand-light-text text-sm hidden"><p>Sim! Os pacotes são um ponto de partida. Entendo que cada negócio é único. Podemos conversar sobre suas necessidades específicas e montar um plano totalmente personalizado. A calculadora de orçamento também ajuda a ter uma ideia de valores para serviços avulsos.</p></div>
+                </div>
+                <div class="border-b border-gray-200 py-1">
+                    <button type="button" class="flex justify-between items-center w-full py-5 font-medium text-left text-brand-text hover:text-brand-primary transition-colors" aria-expanded="false" aria-controls="faq-content-q5"><span>Como funciona o processo de contratação?</span><svg class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                    <div id="faq-content-q5" class="pb-5 px-1 text-brand-light-text text-sm hidden"><p>O primeiro passo é entrar em contato para agendarmos uma conversa inicial. Nela, vamos entender seus objetivos e desafios. Em seguida, apresento uma proposta personalizada. Após a aprovação, iniciamos o onboarding e o planejamento estratégico para suas mídias sociais.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-primary text-white py-12 text-center">
+        <div class="container mx-auto px-6">
+            <h3 class="text-2xl font-heading mb-4">Kah Siqueira - Social Media Estrategista</h3>
+            <p class="mb-2">Transformando ideias em resultados digitais.</p>
+            <p class="mb-4"><a href="mailto:Katricia.siqueira@gmail.com" class="hover:text-brand-secondary transition-colors">Katricia.siqueira@gmail.com</a></p>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://instagram.com/eukahsiqueira/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-secondary transition-colors">Instagram</a>
+            </div>
+            <p class="text-sm text-gray-300">&copy; <span id="currentYear"></span> Kah Siqueira. Todos os direitos reservados.</p>
+            <p class="text-xs text-gray-400 mt-2">Site desenvolvido por <a href="https://instagram.com/jorgecarvalho.pro/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-secondary transition-colors underline">Jorge Carvalho</a>.</p>
+        </div>
+    </footer>
+
+    <button id="openChatbotBtn" aria-label="Abrir chatbot"
+        class="fixed bottom-6 right-6 bg-brand-accent hover:bg-opacity-80 text-white p-3 rounded-full shadow-xl z-[1001] transition-all duration-300 ease-in-out flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2">
+        <img src="./img/kah/kasi.png" alt="K.A.S.I. Avatar" class="chatbot-floating-avatar">
+        <img src="./img/kah/notificacao.png" alt="Notificação" id="chatbotNotificationBadge" class="chatbot-notification-badge-icon">
+    </button>
+    </button>
+
+    <div id="chatbotModal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div id="chatbotModalHeader">
+                <img src="./img/kah/kasi.png" alt="K.A.S.I. Avatar" class="modal-header-avatar">
+                <h3>K.A.S.I. - Assistente IA</h3>
+                <button id="closeChatbotModalBtn" aria-label="Fechar chatbot">&times;</button>
+            </div>
+            <iframe id="chatbotFrame" src="" title="Chatbot Assistente"></iframe>
+        </div>
+    </div>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#997D6C', // Marrom Médio Aconchegante
+                        'brand-secondary': '#9E8F7D', // Bege Acinzentado Suave
+                        'brand-accent': '#513F32', // Marrom Escuro Intenso (para CTAs e destaques fortes)
+                        'brand-text': '#513F32', // Marrom Escuro Intenso (para texto principal)
+                        'brand-light-text': '#513F32',
+                        'brand-bg-light': '#E6E0D9', // Branco Acinzentado Sutil (para fundos de seção)
+                        'brand-bg-white': '#ffffff', // Branco puro
+                    },
+                    fontFamily: {
+                        'heading': ['Playfair Display', 'serif'],
+                        'body': ['Montserrat', 'sans-serif'],
+                    },
+                    spacing: { '12': '3rem', '16': '4rem', '20': '5rem', '24': '6rem', '32': '8rem' }
+                }
+            }
+        }
+    </script>
+    <script type="module" src="./js/main.js" defer></script>
+    <script type="module" src="./js/navbar.js" defer></script>
+    <script type="module" src="./js/formHandler.js" defer></script>
+    <script type="module" src="./js/faqAccordion.js" defer></script>
+    <script type="module" src="./js/calculator.js" defer></script>
+    <script type="module" src="./js/chatbotModal.js" defer></script>
+</body>
+</html>
