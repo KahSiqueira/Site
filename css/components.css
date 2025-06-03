@@ -1,0 +1,201 @@
+/* Estilos para os modais */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 90%;
+    width: 400px;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+.modal-overlay.show .modal-content {
+    transform: translateY(0);
+}
+
+.modal-content button.close-modal-btn {
+    margin-top: 1.5rem;
+    padding: 0.75rem 2rem;
+    background-color: #997D6C; /* brand-primary */
+    color: white;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+.modal-content button.close-modal-btn:hover {
+    filter: brightness(0.9);
+}
+
+/* ESTILOS ESPECÍFICOS PARA O MODAL DO CHATBOT */
+#chatbotModal .modal-content {
+    padding: 0;
+    overflow: hidden;
+    width: 90%;
+    max-width: 400px;
+    height: 75vh; /* Manter a altura do modal externo */
+    max-height: 600px; /* Manter a altura máxima do modal externo */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border-radius: 0.75rem;
+}
+#chatbotModalHeader {
+    display: flex;
+    justify-content: space-between; /* Mantém o 'x' na direita */
+    align-items: center;
+    background-color: #513F32; /* brand-accent (Marrom Escuro Intenso) */
+    color: white;
+    padding: 0.75rem 1rem;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+    flex-shrink: 0;
+    gap: 10px; /* Adiciona espaçamento entre o avatar/nome e o 'x' */
+}
+#chatbotModalHeader h3 {
+    margin: 0;
+    font-size: 1.0em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    flex-grow: 1; /* Permite que o texto ocupe o espaço restante */
+}
+#chatbotModalHeader .modal-header-avatar { /* Estilo para o avatar no cabeçalho do modal */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Borda sutil */
+    flex-shrink: 0; /* Impede que a imagem encolha */
+}
+
+#closeChatbotModalBtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.7rem;
+    line-height: 1;
+    padding: 0.25rem;
+    cursor: pointer;
+    opacity: 0.8;
+}
+#closeChatbotModalBtn:hover {
+    opacity: 1;
+}
+
+#chatbotFrame {
+    width: 100%;
+    border: none;
+    flex-grow: 1;
+}
+
+/* Navbar */
+.scrolled-nav {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.scrolled-nav .nav-link {
+    color: #513F32;
+}
+.scrolled-nav .site-name-text {
+    color: #997D6C;
+}
+.scrolled-nav #mobileMenuButton {
+    color: #513F32 !important;
+}
+.scrolled-nav #mobileMenuButton svg {
+    stroke: currentColor;
+}
+.scrolled-nav #mobileMenu {
+    background-color: #ffffff;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.scrolled-nav #mobileMenu .nav-link {
+    color: #513F32;
+}
+#mainNavbar.bg-transparent #mobileMenu {
+    background-color: rgba(153, 125, 108, 0.95);
+}
+
+/* Badge Popular */
+.popular-badge {
+    background: linear-gradient(to right, #513F32, #9E8F7D);
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o avatar no botão flutuante do chatbot */
+#openChatbotBtn .chatbot-floating-avatar {
+    width: 100%; /* Ocupa a largura total do padding do botão */
+    height: 100%; /* Ocupa a altura total do padding do botão */
+    border-radius: 50%; /* Torna a imagem redonda */
+    object-fit: cover; /* Garante que a imagem preencha sem distorção */
+    border: 2px solid rgba(255, 255, 255, 0.6); /* Borda branca sutil para destaque */
+}
+
+/* Ajustes no padding do botão para o avatar */
+#openChatbotBtn {
+    padding: 2px; /* Reduz o padding para a imagem ocupar mais espaço */
+    /* Garanta que o width e height do botão sejam suficientes para o avatar */
+    width: 50px; /* Exemplo: ajuste conforme necessário */
+    height: 50px; /* Exemplo: ajuste conforme necessário */
+}
+
+/* Estilo para a IMAGEM da notificação do chatbot (agora para notificacao.png) */
+.chatbot-notification-badge-icon {
+    position: absolute;
+    top: -8px; /* Ajuste a posição vertical para o canto superior direito */
+    right: 30px; /* Ajuste a posição horizontal para o canto superior direito */
+    width: 30px; /* Tamanho da notificação */
+    height: 30px; /* Tamanho da notificação */
+    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+    filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.3)); /* Uma pequena sombra para destacar */
+    animation: none; /* REMOVE A ANIMAÇÃO DE SINO */
+    /* Se quiser uma animação de pulso sutil para a notificação, descomente a linha abaixo e o keyframes 'pulse' */
+    animation: pulse 1.5s infinite;
+}
+
+/* Opcional: Manter a animação de pulso se desejar que a notificação pulse */
+/* Se você usou "animation: pulse 1.5s infinite;" acima, mantenha este keyframes: */
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+}

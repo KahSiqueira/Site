@@ -1,0 +1,305 @@
+/* Importação de fonte do Google Fonts (MontSerrat para consistência com o site Kah Siqueira) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+/* Cores da Kah Siqueira para referência */
+/*
+--brand-primary: #997D6C; // Marrom Médio Aconchegante
+--brand-secondary: #9E8F7D; // Bege Acinzentado Suave
+--brand-accent: #513F32; // Marrom Escuro Intenso (para CTAs e destaques fortes)
+--brand-text: #513F32; // Marrom Escuro Intenso (para texto principal)
+--brand-light-text: #513F32; // (Usado no exemplo, manter como brand-text)
+--brand-bg-light: #E6E0D9; // Branco Acinzentado Sutil (para fundos de seção)
+--brand-bg-white: #ffffff; // Branco puro
+*/
+
+/* Estilos Globais e Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #E6E0D9; /* brand-bg-light, fundo mais claro para o chat */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    color: #513F32; /* brand-text, cor de texto principal */
+}
+
+/* Container Principal do Chat */
+.chat-container {
+    background-color: #ffffff; /* brand-bg-white, fundo do chat mais claro */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    width: 100%;
+    max-width: 400px;
+    height: 100%; /* Ajustado para ocupar toda a altura do iframe */
+    max-height: 100%; /* Ajustado para ocupar toda a altura do iframe */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* Remover bordas e padding que causariam duplicidade com o modal externo */
+    border-radius: 0; /* Remove a borda do container interno, o modal externo já tem */
+    box-shadow: none; /* Remove a sombra, o modal externo já tem */
+}
+
+/* REMOVIDO: Blocos de estilo para .chat-header e seus filhos */
+
+
+/* Área de Mensagens */
+.chat-messages {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #ffffff; /* brand-bg-white, fundo da área de mensagens */
+}
+
+/* Estilo para a barra de rolagem (WebKit - Chrome, Edge, Safari) */
+.chat-messages::-webkit-scrollbar {
+    width: 6px; /* Largura da barra de rolagem */
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: #E6E0D9; /* brand-bg-light, fundo da trilha */
+    border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background-color: #997D6C; /* brand-primary, cor da "alça" */
+    border-radius: 3px;
+    border: 2px solid #E6E0D9; /* Borda da alça */
+}
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background: #513F32; /* brand-accent no hover */
+}
+
+
+/* Campo de Entrada de Mensagem */
+.chat-input-area {
+    display: flex;
+    padding: 15px;
+    background-color: #E6E0D9; /* brand-bg-light, fundo da área de input */
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Linha divisória sutil */
+    gap: 10px;
+}
+
+.chat-input-area input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #ffffff; /* brand-bg-white, fundo do campo de input */
+    color: #513F32; /* brand-text, cor do texto digitado */
+    font-size: 1em;
+    outline: none;
+}
+
+.chat-input-area input::placeholder {
+    color: #9E8F7D; /* brand-secondary, cor do texto de placeholder */
+}
+
+.chat-input-area .send-button {
+    background-color: #513F32; /* brand-accent, cor do botão enviar */
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    color: #ffffff; /* Cor do ícone da seta */
+}
+
+.chat-input-area .send-button:hover {
+    background-color: #413228; /* Cor mais escura no hover */
+}
+
+.chat-input-area .send-button:disabled {
+    background-color: #9E8F7D; /* brand-secondary, desabilitado */
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Estilo para o SVG do botão enviar */
+.chat-input-area .send-button svg {
+    width: 20px;
+    height: 20px;
+    transform: rotate(0deg); /* Mantém a seta na direção original */
+    margin-top: -3px;
+    margin-left: 3px;
+}
+
+/* Responsividade Básica (para telas menores que 400px, talvez não tão relevante para o iframe) */
+@media (max-width: 400px) {
+    .chat-container {
+        border-radius: 0;
+        height: 100vh;
+        max-width: 100%;
+    }
+}
+
+/* Estilos para Mensagens do Chat */
+.message {
+    display: flex;
+    align-items: flex-end;
+    max-width: 85%;
+}
+
+.message-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Borda sutil nos avatares das mensagens */
+}
+
+.text-bubble {
+    padding: 12px 18px;
+    border-radius: 20px;
+    word-wrap: break-word;
+    line-height: 1.5;
+    font-size: 0.95em;
+    color: #513F32; /* brand-text para balões de texto */
+}
+
+/* Estilo para Mensagens do Bot (K.A.S.I.) */
+.bot-message {
+    align-self: flex-start;
+}
+
+.bot-message .text-bubble {
+    background-color: #E6E0D9; /* brand-bg-light, cor mais clara para balões da K.A.S.I. */
+    border-bottom-left-radius: 4px;
+}
+
+/* Estilo para Mensagens do Usuário */
+.user-message {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.user-message .message-avatar {
+    margin-right: 0;
+    margin-left: 8px;
+}
+
+.user-message .text-bubble {
+    background-color: #997D6C; /* brand-primary, cor principal para balões do usuário */
+    color: #ffffff; /* Texto branco para contraste */
+    border-bottom-right-radius: 4px;
+}
+
+/* Estilo específico para o balão de serviço com ícones (se for usado pelo chatbot) */
+.service-bubble .text-bubble {
+    padding: 15px;
+}
+
+.service-message-content .service-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+.service-message-content .service-item:last-child {
+    margin-bottom: 0;
+}
+
+.service-message-content .service-item img {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.service-message-content .highlight {
+    font-weight: 600;
+    color: #513F32; /* brand-accent para destaque */
+}
+
+/* Estilos para o Indicador de Digitação (Typing Indicator) */
+.typing-indicator {
+    align-self: flex-start; /* Alinha à esquerda como mensagem do bot */
+    display: flex; /* Para centralizar as bolinhas no balão */
+    align-items: flex-end;
+    max-width: 85%;
+}
+
+.typing-indicator .message-avatar {
+    margin-right: 8px;
+}
+
+.typing-indicator .text-bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 30px;
+    background-color: #E6E0D9; /* brand-bg-light, mesma cor dos balões da K.A.S.I. */
+    border-radius: 20px;
+    padding: 0; /* Remover padding extra para as bolinhas */
+}
+
+/* Animação das Bolinhas */
+.dot-flashing {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #997D6C; /* brand-primary, cor das bolinhas */
+    color: #997D6C;
+    animation: dotFlashing 1s infinite alternate;
+    animation-delay: 0s;
+}
+
+.dot-flashing::before,
+.dot-flashing::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #997D6C;
+    color: #997D6C;
+    animation: dotFlashing 1s infinite alternate;
+}
+
+.dot-flashing::before {
+    left: -12px;
+    animation-delay: 0.2s;
+}
+
+.dot-flashing::after {
+    left: 12px;
+    animation-delay: 0.4s;
+}
+
+@keyframes dotFlashing {
+    0% {
+        background-color: #997D6C; /* brand-primary */
+    }
+    50%,
+    100% {
+        background-color: #513F32; /* brand-accent na animação */
+    }
+}
+
+/* Cor primária para mensagens do bot (se precisar de um destaque diferente) */
+.bot-message-primary .text-bubble {
+    background-color: #513F32; /* brand-accent */
+    color: #ffffff;
+    border-bottom-left-radius: 4px;
+}

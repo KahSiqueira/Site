@@ -1,0 +1,73 @@
+/* Configuração Tailwind CSS (apenas para referência, pois o CDN carrega a config embutida) */
+/*
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                'brand-primary': '#997D6C', // Marrom Médio Aconchegante
+                'brand-secondary': '#9E8F7D', // Bege Acinzentado Suave
+                'brand-accent': '#513F32', // Marrom Escuro Intenso (para CTAs e destaques fortes)
+                'brand-text': '#513F32', // Marrom Escuro Intenso (para texto principal)
+                'brand-light-text': '#513F32',
+                'brand-bg-light': '#E6E0D9', // Branco Acinzentado Sutil (para fundos de seção)
+                'brand-bg-white': '#ffffff', // Branco puro
+            },
+            fontFamily: {
+                'heading': ['Playfair Display', 'serif'],
+                'body': ['Montserrat', 'sans-serif'],
+            },
+            spacing: { '12': '3rem', '16': '4rem', '20': '5rem', '24': '6rem', '32': '8rem' }
+        }
+    }
+}
+*/
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #513F32;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #997D6C;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #513F32;
+}
+
+/* Comportamento de scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Remove setas de input number */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Altura mínima para seções considerando o header */
+.min-h-screen-minus-header {
+    min-height: calc(100vh - 96px);
+}
+@media (max-width: 767px) {
+    .min-h-screen-minus-header {
+        min-height: calc(100vh - 80px);
+    }
+}

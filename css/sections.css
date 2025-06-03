@@ -1,0 +1,21 @@
+/* Estilos para o padding das seções */
+.section-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+@media (min-width: 768px) {
+    .section-padding {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+}
+
+/* Seção Home */
+#home {
+    background-image: url('../img/kah/k-fundo.jpg'); /* Ajuste o caminho da imagem */
+}
+
+/* Seção Contact (Imagem) */
+#contact img {
+    /* Styles for k-notebook.png */
+}
