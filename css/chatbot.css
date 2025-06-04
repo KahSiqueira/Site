@@ -303,3 +303,93 @@ body {
     color: #ffffff;
     border-bottom-left-radius: 4px;
 }
+
+.chat-buttons-container {
+    display: flex;
+    flex-direction: column; /* Botões um abaixo do outro */
+    gap: 8px; /* Espaçamento entre os botões */
+    margin-top: 12px; /* Espaçamento do texto acima, se houver texto */
+    align-items: flex-start; /* Alinha botões à esquerda no balão do bot */
+}
+
+.user-message .chat-buttons-container {
+    align-items: flex-end; /* Alinha botões à direita no balão do usuário, se aplicável */
+}
+
+.chat-action-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    border-radius: 25px; /* Bordas bem arredondadas */
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease, filter 0.2s ease, transform 0.1s ease;
+    border: none; /* Remover borda padrão de links */
+    cursor: pointer;
+    gap: 8px; /* Espaço entre ícone e texto */
+    min-width: 150px; /* Largura mínima para consistência */
+    text-align: center;
+}
+
+.chat-action-button svg {
+    width: 1em; /* Tamanho do ícone relativo ao tamanho da fonte */
+    height: 1em;
+    /* fill: currentColor; (removido para permitir cores específicas por botão) */
+}
+
+.chat-action-button span {
+    line-height: 1; /* Para melhor alinhamento vertical do texto */
+}
+
+.chat-action-button:hover {
+    filter: brightness(0.9);
+}
+.chat-action-button:active {
+    transform: translateY(1px);
+}
+
+/* Estilos específicos por botão (usando suas cores de marca onde apropriado) */
+.chat-action-button.whatsapp-button {
+    background-color: #25D366; /* Cor oficial do WhatsApp */
+    color: white;
+}
+.chat-action-button.whatsapp-button svg {
+    fill: white;
+}
+
+.chat-action-button.email-button {
+    background-color: #513F32; /* brand-accent (Marrom Escuro Intenso) */
+    color: white;
+}
+.chat-action-button.email-button svg {
+    fill: white;
+}
+
+.chat-action-button.instagram-button {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+}
+.chat-action-button.instagram-button svg {
+    fill: white;
+}
+
+/* Ajuste para o balão do bot se o texto antes dos botões for pequeno ou ausente */
+.bot-message .text-bubble:has(.chat-buttons-container) {
+    /* Se o text-bubble tiver padding, e o conteúdo principal for só os botões
+       ou um texto muito curto, você pode querer ajustar o padding ou margens.
+       Por exemplo, se o textBubble tiver um padding de 12px 18px:
+    */
+    /* padding-bottom: 12px;  /* Mantém padding inferior se texto + botões */
+}
+
+.bot-message .text-bubble .chat-buttons-container:first-child {
+    /* Se os botões são o PRIMEIRO elemento (ou seja, não há texto antes deles),
+       remove a margem superior para não criar espaço extra.
+    */
+    /* margin-top: 0; */
+}
+.bot-message .text-bubble > br:last-child { /* Remove quebra de linha extra se texto for vazio */
+    display: none;
+}
