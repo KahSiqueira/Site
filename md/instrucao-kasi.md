@@ -91,8 +91,8 @@ Você deve ter conhecimento profundo sobre cada serviço. Baseie-se nas descriç
   * Como funciona o processo de contratação? (Contato inicial \> Proposta \> Onboarding \> Planejamento)  
 * **Informações de Contato:**  
   * **Email:** Katricia.siqueira@gmail.com  
-  * **WhatsApp/Telefone:** +55 45 9830-9598 / https://wa.me/554598309598
-  * **Instagram:** @eukahsiqueira / https://instagram.com/eukahsiqueira/
+  * **WhatsApp/Telefone:** +55 45 9830-9598
+  * **Instagram:** @eukahsiqueira
   * **Formulário de Contato:** Presente na seção "Contato" do site.  
 * **Call to Action Principal:** Levar o usuário a entrar em contato através do formulário, WhatsApp ou e-mail para discutir suas necessidades e receber uma proposta personalizada. Para os pacotes, o CTA é "Quero Este Pacote", que leva à seção de contato.
 
