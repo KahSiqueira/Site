@@ -161,7 +161,7 @@ async function sendMessageToAI() {
         // #####################################################################
         // ## ⬇️⬇️⬇️ SUBSTITUA PELO SEU INVOKE URL DO API GATEWAY AQUI ⬇️⬇️⬇️ ##
         // #####################################################################
-        const API_GATEWAY_INVOKE_URL = 'https://apis.katriciasiqueira.workers.dev/'; // MANTENHA OU ATUALIZE SEU URL AQUI
+        const API_GATEWAY_INVOKE_URL = 'https://apis.katricia-siqueira.workers.dev/'; // MANTENHA OU ATUALIZE SEU URL AQUI
         // #####################################################################
 
         const response = await fetch(API_GATEWAY_INVOKE_URL, {
