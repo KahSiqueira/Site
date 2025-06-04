@@ -115,6 +115,10 @@ async function carregarInstrucoes() {
             throw new Error(`Erro ao carregar o arquivo de instruções: ${response.statusText} (status: ${response.status})`);
         }
         systemInstructionContent = await response.text();
+        if (!systemInstructionContent || systemInstructionContent.trim() === '') {
+            throw new Error("O arquivo de instruções está vazio ou contém apenas espaços em branco.");
+        }
+        console.log("Instruções da IA carregadas com sucesso.");
         console.log("Instruções da IA carregadas com sucesso.");
 
         // Adiciona a saudação inicial APÓS carregar as instruções (garante que tudo está pronto)
