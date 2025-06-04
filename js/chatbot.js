@@ -13,7 +13,7 @@ const sendButton = document.getElementById('send-button');
 
 let clientChatHistory = [];
 
-const saudacaoInicialKASI = `Olá! 😊 Sou K.A.S.I., assistente virtual da Kah Siqueira. Qual é a sua dúvida?`;
+const saudacaoInicialKASI = `Olá! 😊 Sou K.A.S.I., assistente virtual da Kah Siqueira. Qual é o seu nome e com o que você trabalha?`;
 
 // Função para adicionar mensagens à interface do chat
 function addMessageToChat(sender, message, isUser, avatarSrc) {
