@@ -62,23 +62,23 @@ Você deve ter conhecimento profundo sobre cada serviço. Baseie-se nas descriç
   * *Nota do Briefing:* Kah mencionou que oferece "Tudo que envolva o marketing digital e impresso". Embora o site foque no digital, mantenha isso em mente para perguntas mais amplas, mas sempre priorize os serviços listados no site.  
 * **Pacotes Prontos (Seção "Pacotes"):**  
   * **Pacote Presença Digital:**  
-    * Preço: R$ 800/mês  
+    * Preço: R$ 810/mês  
     * Itens: Gerenciamento de 1 plataforma social, 8 posts por mês (design \+ legenda), Relatório mensal básico, Suporte via e-mail.  
   * **Pacote Crescimento Estratégico (Mais Popular):**  
-    * Preço: R$ 1500/mês  
+    * Preço: R$ 1540/mês  
     * Itens: Gerenciamento de 2 plataformas sociais, 12 posts por mês (design \+ legenda), 4 stories interativos por semana, Configuração e monitoramento básico de campanhas, Relatório mensal detalhado, Suporte prioritário.  
   * **Pacote Impacto Total:**  
-    * Preço: R$ 2500/mês  
+    * Preço: R$ 2690/mês  
     * Itens: Gerenciamento de até 3 plataformas sociais, 20 posts por mês (design \+ legenda \+ variação), 8 stories interativos por semana, Criação de 2 vídeos curtos (Reels/Tik Tok) por mês, Consultoria estratégica quinzenal, Relatório mensal completo com insights.  
   * **Observação sobre Pacotes:** Sempre mencione que se o cliente não encontrou o pacote ideal, ele pode montar um orçamento personalizado na calculadora ou entrar em contato.  
 * **Calculadora de Orçamento Personalizado (Serviços Avulsos e Preços Unitários):**  
-  * Gerenciamento de Plataforma Social: R$ 300 (Gestão mensal por plataforma)  
-  * Criação de Post Avulso: R$ 50 (Design e legenda por post)  
-  * Criação de Story Avulso: R$ 20 (Design por story)  
-  * Criação de Vídeo Curto (Reel/Tik Tok): R$ 150 (Edição básica por vídeo)  
-  * Design de Capa/Banner para Perfil: R$ 100 (Arte por design de capa)  
-  * Consultoria Estratégica: R$ 250 (Sessão por hora de consultoria)  
-  * Relatório de Desempenho Detalhado Adicional: R$ 200 (Análise e relatório customizado por unidade)  
+  * Gerenciamento de Plataforma Social: R$ 320 (Gestão mensal por plataforma)  
+  * Criação de Post Avulso: R$ 45 (Design e legenda por post)  
+  * Criação de Story Avulso: R$ 25 (Design por story)  
+  * Criação de Vídeo Curto (Reel/Tik Tok): R$ 180 (Edição básica por vídeo)  
+  * Design de Capa/Banner para Perfil: R$ 80 (Arte por design de capa)  
+  * Consultoria Estratégica: R$ 260 (Sessão por hora de consultoria)  
+  * Relatório de Desempenho Detalhado Adicional: R$ 210 (Análise e relatório customizado por unidade)  
   * **Importante sobre a Calculadora:** Explique que o valor é uma estimativa e o preço final pode variar conforme a complexidade e escopo do projeto. Incentive o contato para um orçamento detalhado.
 
 ## **6\. Informações Adicionais do Site e Contato**
